@@ -1,0 +1,15 @@
+#flexbox {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+
+#flexbox>* {
+       	width: auto;
+    }
+  
+p, h1 {
+	text-align: center;
+}
+
+

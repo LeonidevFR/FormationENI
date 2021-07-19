@@ -1,0 +1,35 @@
+<!--Il faudra donner des indices : passer des paramètres sur le click...-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Les savoirs inutiles</title>
+    <script src="TPListe.js"></script>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body>
+    <p>Ce petit TP a pour but de pouvoir insérer une liste de savoirs inutiles(une phrase, un auteur et une date)
+        et de pouvoir supprimer ce savoir en cliquant dessus
+    </p>
+    <div id="divSaisie">
+        <div>
+            <label for="libelleSavoir">Savoir :</label><input type="text" id="libelleSavoir" size="50">
+        </div>
+        <div>
+            <label for="auteur">Auteur :</label><input type="text" id="auteur" size="50">
+        </div>
+        <div>
+            <label for="date">Date découverte :</label><input type="date" id="date" size="50">
+        </div>
+        <div>
+            <button onclick="ajouter()">Ajouter</button>
+        </div>
+    </div>
+    <div id="divResultat">
+        <ol id="olListeSavoir">
+
+        </ol>
+    </div>
+</body>
+</html>
+<script>initialiserFormulaire();</script>

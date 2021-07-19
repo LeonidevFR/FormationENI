@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TpRadar.css">
+    <script src="TpRadar.js"></script>
+    <title>Tp Radar</title>
+</head>
+<body>
+    <div id="div1">
+        <p>La vitesse de frappe est de <b id="par1"></b> caratères/mn</p>
+    </div>
+    <div id="div2">
+        <p>La vitesse de frappe sur votre intervalle est de <b id="par2"></b> caratères/intervalle</p>
+    </div>
+    <div id="div3">
+        <p>Votre record de vitesse de frappe par minute est de <b id="par3"></b> caratères/intervalle</p>
+        <button id="erase" onclick="eraseData()">Effacer le record</button>
+    </div>
+    <div id="div-texte">
+        <label for="type-text">Veuillez écrire votre texte, je vous dirai à quelle vitesse vous écrivez :</label>
+        <br>
+        <textarea id="type-text" name="type-text"
+                rows="10" cols="100" focus></textarea>
+    </div>
+    <script>startApp();</script>
+</body>
+</html>
