@@ -1,0 +1,55 @@
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    min-height: 500px;
+}
+
+button{
+    background-color: darkblue;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.btn {
+    background-color: lightgray;
+    margin: 5px 0px;
+}
+
+header h1 {
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    padding: 10px;
+    color: darkblue;
+}
+
+.nav a {
+    padding: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+}
+
+label {
+    display: block;
+    padding: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+main {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.flash-success {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+}

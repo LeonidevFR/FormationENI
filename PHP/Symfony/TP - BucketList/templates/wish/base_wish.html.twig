@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link {% block css %}rel="stylesheet" href="{{ asset('css/base.css') }}"{% endblock %}>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon-16x16.png') }}">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+</head>
+<body>
+<header>
+    {% block header %}
+        <div class="flex">
+            <img src="{{ asset('img/ms-icon-150x150.png') }}" alt="bucketlist-logo">
+            <h1>Bucket List !</h1>
+            <nav>
+                <div class="nav">
+                    <button><a href="{{ path('app_main_home') }}" title="Home">Home</a></button>
+                    <button><a href="{{ path('app_wish_list') }}" title="Wish List">Wish List</a></button>
+                    {% if not app.user %}
+                        <button><a href="{{ path('app_login') }}" title="Login">Login</a></button>
+                        <button><a href="{{ path('app_register') }}" title="Register">Register</a></button>
+                    {% endif %}
+                    {% if app.user %}
+                        <button><a href="{{ path('app_wish_createwish') }}" title="Create A Wish">Create A Wish</a></button>
+                        <button><a href="{{ path('app_logout') }}" title="Logout">Logout</a></button>
+                    {% endif %}
+                    <button><a href="{{ path('app_main_about') }}" title="About">About Us</a></button>
+                </div>
+            </nav>
+        </div>
+        {% if app.user %}
+            <div class="center">
+                <h3>Bonjour {{ app.user.pseudo }}</h3>
+            </div>
+        {% endif %}
+    {% endblock %}
+</header>
+<main>
+    {% block body %}
+
+    {% endblock %}
+</main>
+
+<footer>
+    {% block footer %}
+        <p>&copyBucket-List {{ 'now' | date('Y') }}</p>
+    {% endblock %}
+</footer>
+</body>
+</html>

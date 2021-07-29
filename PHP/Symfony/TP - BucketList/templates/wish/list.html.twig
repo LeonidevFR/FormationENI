@@ -1,0 +1,26 @@
+{%  extends 'wish/base_wish.html.twig' %}
+
+{% block body %}
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="flash-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div>
+        <ul>
+            {% for wish in wishes %}
+                <li><a href="{{ path('app_wish_details', {'id': wish.id}) }}">{{ wish.title }}</a>
+                    par <b>{{ wish.author }}</b>
+                    in {{ wish.category.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+{% block title %}
+    Wish List
+{% endblock %}
